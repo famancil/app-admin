@@ -1,0 +1,79 @@
+<%= stylesheet_link_tag "views/index.css" %>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#0E9CC8;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="ml-auto">
+      <div class="shape_perfil"></div>
+      <div class="perfil">Tu perfil</div>
+    </div>
+  </div>
+</nav>
+
+<div class="rectangle">
+
+  <div class="logo"></div>
+  
+  <div class="group">
+    <div class="background">
+      <div class="corporaciones"> Corporaciones</div>
+    </div>
+  </div>
+  
+  <div class="shape_usuarios"></div>
+  <div class="usuarios">Usuarios</div>
+
+  <div class="shape_home"></div>
+  <div class="home">Sucursales</div> 
+
+  <div class="shape_modulos"></div>
+  <div class="modulos">Modulos</div>  
+
+
+  <%= link_to 'Cerrar Sesión', login_path, :class =>'cerrar_sesion'%>
+
+  <div class="listado">Listado de Corporaciones/Divisiones</div>
+
+  <%= button_to 'Agregar Corporación', new_corporacion_path,method: :get, :class => 'agregar' %>
+
+  <table class="table" style="position: absolute;
+    width: 1040px;
+
+
+      left: 290px;
+      top: 282px;
+
+      border: 1px solid #DDDDDD;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Rut</th>
+      <th>Contraseña</th>
+      <th>Sucursal</th>
+      <th>Filas</th>
+      <th colspan="3" style="text-align: center;">Config</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @corporacions.each do |corporacion| %>
+      <tr>
+        <td><%= corporacion.nombre %></td>
+        <td><%= corporacion.rut %></td>
+        <td><%= corporacion.contraseña %></td>
+        <td><%= corporacion.sucursal %></td>
+        <td><%= corporacion.filas %></td>
+        <td><%= link_to (fa_icon "users"), corporacion_users_path(corporacion.id) %></td>
+        <td><%= link_to (fa_icon "edit"), edit_corporacion_path(corporacion) %></td>
+        <td><%= link_to (fa_icon "trash"), corporacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>    
+  
+</div>
+
+

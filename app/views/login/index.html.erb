@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "views/login.css" %>
+
+<div class="rectangule4">
+
+	<%= form_for(@user, url: login_path, html: {role: "form",multipart: true, method: :post}) do |form| %>
+		
+		<div class="logo"></div>
+
+		<div class="rectangule3">
+			<%= form_errors(@user.errors)%>
+		</div>
+
+		<div class="ingrese">
+			Ingrese tus datos para iniciar sesión
+		</div>
+		
+		<%= form.text_field :correo, placeholder: "Escribe Correo", :class =>'rectangle_two' %>
+
+		<%= form.text_field :contraseña, placeholder: "Escribe Password", :class =>'rectangle' %>
+	
+
+		<div class="group">
+			<%= form.submit 'Iniciar Sesion', :class => 'rectangule2'%>
+			
+		</div>
+
+	<% end %>
+</div>

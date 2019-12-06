@@ -1,0 +1,66 @@
+<%= stylesheet_link_tag "views/index_user.css" %>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#0E9CC8;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="ml-auto">
+      <div class="shape_perfil"></div>
+      <div class="perfil">Tu perfil</div>
+    </div>
+  </div>
+</nav>
+
+<div class="rectangle">
+
+  <div class="logo"></div>
+  
+  <div class="group">
+    <div class="background">
+      <div class="shape_usuarios"></div>
+      <div class="corporaciones"> Usuarios</div>
+    </div>
+  </div>
+
+  <%= link_to 'Cerrar Sesión', login_path, :class =>'cerrar_sesion'%>
+  
+  <div class="listado">Listado de Usuarios</div>
+
+  <%= button_to 'Volver a Listado Corp.', corporacions_path,method: :get, :class => 'agregar2' %>
+
+  <%= button_to 'Agregar Usuario', new_corporacion_user_path,method: :get, :class => 'agregar' %>
+
+  <table class="table custom" >
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Rut</th>
+      <th>Correo</th>
+      <th>Contraseña</th>
+      <th>Sucursal</th>
+      <th>Filas</th>
+      <th colspan="2">Config</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.nombre %></td>
+        <td><%= user.apellido %></td>
+        <td><%= user.rut %></td>
+        <td><%= user.correo %></td>
+        <td><%= user.contraseña %></td>
+        <td><%= user.sucursal %></td>
+        <td><%= user.filas %></td>
+        <td><%= link_to (fa_icon "edit"), edit_corporacion_user_path(@corporacion_id,user) %></td>
+        <td><%= link_to (fa_icon "trash"), corporacion_user_path(@corporacion_id,user), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>    
+  
+</div>

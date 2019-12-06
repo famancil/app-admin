@@ -1,0 +1,110 @@
+html{
+	position: relative;
+	width: 1440px;
+	height: 968px;
+}
+.rectangule4{
+	position: absolute;
+	width: 1439px;
+	height: 968px;
+	left: 0px;
+	top: 0px;
+
+	background: radial-gradient(100% 100%, rgba(248, 248, 248, 0.55) 0%, rgba(186, 232, 242, 0.55) 100%, rgba(35, 67, 74, 0.55) 100%);
+}
+.logo{
+	position: absolute;
+	width: 370px;
+	height: 102px;
+	left: 531px;
+	top: 212px;
+
+	background-image: url('/assets/Logo_Saltala_Horizontal.png');
+}
+.rectangle{
+	position: absolute;
+	width: 342px;
+	height: 58px;
+	left: 559px;
+	top: 505px;
+	text-align: center;
+	border: 1px solid #129DC8;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+.rectangle_two{
+	position: absolute;
+	width: 342px;
+	height: 58px;
+	left: 559px;
+	top: 418px;
+
+	text-align: center;
+	border: 1px solid #129DC8;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+.group{
+	position: absolute;
+	width: 373px;
+	height: 71px;
+	left: 545.5px;
+	top: 603px;
+}
+
+.rectangule3{
+	position: absolute;
+	width: 372px;
+	height: 70px;
+	left: 559px;
+	top: 100px;
+
+	color: #FFFFFF;
+}
+
+.rectangule2{
+	position: absolute;
+	width: 372px;
+	height: 70px;
+	
+
+	background: linear-gradient(199.15deg, #93E1F1 16.65%, #5AC0DF 87.56%);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	color: #FFFFFF;
+}
+.iniciar_sesion{
+	position: absolute;
+	width: 203px;
+	height: 29px;
+	left: 628px;
+	top: 621px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 29px;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+.ingrese{
+	position: absolute;
+	width: 400px;
+	height: 26px;
+	left: 525px;
+	top: 348px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 26px;
+	/* identical to box height */
+
+	text-align: center;
+
+	color: #129DC8;
+}
