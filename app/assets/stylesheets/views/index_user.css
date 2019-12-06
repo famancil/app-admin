@@ -26,7 +26,7 @@
   left: 30px;
   top: 37px;
 
-  background: url(/assets/LogoBlanco.png);
+  background: url(/LogoBlanco.png);
 }
 .right-align {
   text-align: left;
@@ -71,7 +71,7 @@
   height: 27px;
   left: 30px;
   top: calc(50% - 30px/2 + 3.5px);
-  background: url(/assets/Shape.png);
+  background: url(/Shape.png);
   /*background: #FFFFFF;*/
 }
 .shape_perfil{
@@ -81,7 +81,7 @@
   left: 1210px;
   top: 20.5px;
 
-  background: url(/assets/Shape.png);
+  background: url(/Shape.png);
 }
 .perfil{
   position: absolute;

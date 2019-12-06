@@ -26,7 +26,7 @@
     left: 30px;
     top: 37px;
 
-    background: url(/assets/LogoBlanco.png);
+    background: url(/LogoBlanco.png);
   }
   .right-align {
     text-align: left;
@@ -71,7 +71,7 @@
     height: 27px;
     left: 47px;
     top: 252px;
-    background: url(/assets/Shape.png);
+    background: url(/Shape.png);
     /*background: #FFFFFF;*/
   }
   .usuarios{
@@ -97,7 +97,7 @@
     height: 29px;
     left: 46px;
     top: 319px;
-    background: url(/assets/ShapeHome.png);
+    background: url(/ShapeHome.png);
   }
   .home{
     position: absolute;
@@ -123,7 +123,7 @@
     left: 48px;
     top: 394px;
 
-    background: url(/assets/ShapeMod.png);
+    background: url(/ShapeMod.png);
   }
   .modulos{
     position: absolute;
@@ -167,7 +167,7 @@
     left: 1210px;
     top: 20.5px;
 
-    background: url(/assets/Shape.png);
+    background: url(/Shape.png);
   }
   .perfil{
     position: absolute;
